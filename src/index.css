@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-paragraph font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-heading font-bold;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-section-mobile md:py-section-desktop px-6 md:px-8;
+  }
+
+  .container-max {
+    @apply max-w-container mx-auto;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-button font-semibold
+           hover:bg-amber-700 transition-all duration-300
+           hover:shadow-lg hover:-translate-y-0.5 inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-primary border-2 border-primary px-8 py-4 rounded-button font-semibold
+           hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .card {
+    @apply bg-card rounded-card p-8 shadow-sm hover:shadow-xl
+           transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .section-label {
+    @apply text-primary text-sm font-semibold tracking-widest uppercase;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-heading leading-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
