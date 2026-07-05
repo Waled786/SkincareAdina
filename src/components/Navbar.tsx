@@ -22,18 +22,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-4'
-          : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-sm py-4'
+        : 'bg-transparent py-6'
+        }`}
     >
       <div className="container-max px-6 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-heading">
-              Lumière<span className="text-primary">.</span>
+            <span className="text-1xl font-bold text-heading">
+              <span className="text-1xl font-bold">Skin Care</span>
+              <br />
+              <span className="text-primary">Dr. Adina</span>
             </span>
           </a>
 
@@ -62,9 +63,8 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 mt-6' : 'max-h-0'
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 mt-6' : 'max-h-0'
+            }`}
         >
           <div className="flex flex-col gap-4 py-4 border-t border-border">
             {navLinks.map((link) => (

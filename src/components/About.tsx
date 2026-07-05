@@ -34,7 +34,7 @@ const About = () => {
             Pioneering Excellence in Skincare
           </h2>
           <p className="text-paragraph leading-relaxed">
-            At Lumière Skin Clinic, we believe that radiant skin is not just about
+            At Skincare by <span className="text-primary">Dr. Adina</span> clinic, we believe that radiant skin is not just about
             aesthetics—it's about confidence, health, and self-care. Our mission
             is to deliver transformative skincare experiences backed by science
             and delivered with compassion.

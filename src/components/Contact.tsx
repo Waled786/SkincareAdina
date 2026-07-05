@@ -4,20 +4,20 @@ const contactMethods = [
   {
     icon: Phone,
     title: 'Phone',
-    detail: '+1 (310) 555-0123',
-    action: 'tel:+13105550123',
+    detail: '+92 314 6090365 ',
+    action: 'tel:+923146090365',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    detail: '+1 (310) 555-0124',
-    action: 'https://wa.me/13105550124',
+    detail: '+92 307 9873642',
+    action: 'https://wa.me/923079873642',
   },
   {
     icon: MapPin,
     title: 'Clinic Address',
-    detail: '123 Radiance Boulevard, Suite 500, Beverly Hills, CA 90210',
-    action: 'https://maps.google.com',
+    detail: 'Mochi Wala Road, Street No. 6, near Riaz Parvez Workshop, Gojra',
+    action: 'https://maps.app.goo.gl/PfZ9CmTCRKzyh8X38?g_st=aw',
   },
 ];
 

@@ -11,9 +11,9 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: FaFacebookF, href: '#', label: 'Facebook' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaTiktok, href: '#', label: 'TikTok' },
-    { icon: FaWhatsapp, href: '#', label: 'WhatsApp' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/skincarebyadina?igsh=bzZ2YWZ0MTk0Zmw1', label: 'Instagram' },
+    { icon: FaTiktok, href: 'https://www.tiktok.com/@dr_adina_chauhdary?_r=1&_t=ZS-97Yzvq1mHb8', label: 'TikTok' },
+    { icon: FaWhatsapp, href: 'https://wa.me/923079873642', label: 'WhatsApp' },
   ];
 
   return (
@@ -24,7 +24,9 @@ const Footer = () => {
           <div>
             <a href="#home" className="inline-block mb-6">
               <span className="text-2xl font-bold text-white">
-                Lumière<span className="text-primary">.</span>
+                SkinCare by
+                <br />
+                <span className="text-primary">Dr. Adina</span>
               </span>
             </a>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -73,7 +75,7 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors duration-300 text-sm"
                 >
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  +1 (310) 555-0123
+                  +92 307 9873642
                 </a>
               </li>
               <li>
@@ -82,15 +84,14 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors duration-300 text-sm"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  hello@lumiereskin.com
+                  skincarebyadina@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  123 Radiance Boulevard<br />
-                  Suite 500, Beverly Hills<br />
-                  CA 90210
+                  Mochi Wala Road, Street No. 6, near Riaz Parvez Workshop,
+                  Gojra
                 </span>
               </li>
             </ul>
@@ -101,7 +102,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm">
-              &copy; {new Date().getFullYear()} Lumière Skin Clinic. All rights reserved.
+              &copy; {new Date().getFullYear()} Dr. Adina Skin Clinic. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-white/50 hover:text-white transition-colors duration-300">
