@@ -32,9 +32,9 @@ const Navbar = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <span className="text-1xl font-bold text-heading">
-              <span className="text-1xl font-bold">Skin Care</span>
+              <span className="text-1xl font-bold">Adina General and</span>
               <br />
-              <span className="text-primary">Dr. Adina</span>
+              <span className="text-primary">Skin Clinic</span>
             </span>
           </a>
 
