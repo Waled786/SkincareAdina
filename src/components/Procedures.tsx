@@ -4,7 +4,7 @@ interface Procedure {
   id: number;
   name: string;
   description: string;
-  duration: string;
+  // duration: string;
   image: string;
   icon: React.ElementType;
   badge?: string;
@@ -15,65 +15,73 @@ const procedures: Procedure[] = [
     id: 1,
     name: 'Hydra Facial',
     description: 'Deep cleansing and hydration treatment for radiant, refreshed skin.',
-    duration: '60 min',
-    image: 'https://images.pexels.com/photos/3757951/pexels-photo-3757951.jpeg?auto=compress&cs=tinysrgb&w=600',
+    // duration: '60 min',
+    image: 'Hydra Facial.png',
     icon: Droplets,
     badge: 'Most Popular',
   },
   {
     id: 2,
-    name: 'Skin Whitening',
+    name: 'Botox',
     description: 'Advanced brightening treatment for a more even, luminous complexion.',
-    duration: '45 min',
-    image: 'https://images.pexels.com/photos/4041056/pexels-photo-4041056.jpeg?auto=compress&cs=tinysrgb&w=600',
+    // duration: '45 min',
+    image: '/Botox.png',
     icon: Sun,
   },
   {
     id: 3,
-    name: 'PRP Therapy',
+    name: 'CO₂',
     description: 'Platelet-rich plasma treatment for natural skin rejuvenation.',
-    duration: '90 min',
-    image: 'https://images.pexels.com/photos/4162579/pexels-photo-4162579.jpeg?auto=compress&cs=tinysrgb&w=600',
+    // duration: '90 min',
+    image: 'Co2 Laser.png',
     icon: Syringe,
     badge: 'Advanced',
   },
   {
     id: 4,
-    name: 'Laser Hair Removal',
+    name: 'Face Hair Removal Laser',
     description: 'Long-lasting hair reduction with state-of-the-art laser technology.',
-    duration: '30-60 min',
-    image: 'https://images.pexels.com/photos/3757951/pexels-photo-3757951.jpeg?auto=compress&cs=tinysrgb&w=600',
+    // duration: '30-60 min',
+    image: 'Face Hair Removal Laser.png',
     icon: Zap,
   },
   {
     id: 5,
-    name: 'Acne Treatment',
-    description: 'Targeted solutions for acne-prone skin with visible results.',
-    duration: '45 min',
-    image: 'https://images.pexels.com/photos/4041390/pexels-photo-4041390.jpeg?auto=compress&cs=tinysrgb&w=600',
-    icon: Activity,
-    badge: 'New',
+    name: 'Hair PRP',
+    description: 'Long-lasting hair reduction with state-of-the-art laser technology.',
+    // duration: '30-60 min',
+    image: 'Hair PRP.png',
+    icon: Zap,
   },
   {
     id: 6,
     name: 'Chemical Peel',
     description: 'Professional exfoliation treatment for smoother, renewed skin.',
-    duration: '30 min',
+    // duration: '30 min',
     image: 'https://images.pexels.com/photos/4041389/pexels-photo-4041389.jpeg?auto=compress&cs=tinysrgb&w=600',
     icon: FlaskConical,
   },
+  {
+    id: 7,
+    name: 'Face PRP',
+    description: 'Targeted solutions for acne-prone skin with visible results.',
+    // duration: '45 min',
+    image: 'Face PRP.png',
+    icon: Activity,
+    badge: 'New',
+  },
+
 ];
 
 const ProcedureCard = ({ procedure }: { procedure: Procedure }) => {
   return (
     <div className="card group cursor-pointer p-0 overflow-hidden">
       {/* Procedure Image */}
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative h-[320px] overflow-hidden">
         <img
           src={procedure.image}
           alt={procedure.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          loading="lazy"
+          className="w-full h-full object-cover"
         />
         {procedure.badge && (
           <span className="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -91,7 +99,7 @@ const ProcedureCard = ({ procedure }: { procedure: Procedure }) => {
       <div className="p-6">
         <div className="flex items-center gap-2 mb-2">
           <procedure.icon className="w-5 h-5 text-primary" />
-          <span className="text-sm text-paragraph/70">{procedure.duration}</span>
+          {/* <span className="text-sm text-paragraph/70">{procedure.duration}</span> */}
         </div>
         <h3 className="text-lg font-semibold text-heading mb-2">{procedure.name}</h3>
         <p className="text-sm text-paragraph">{procedure.description}</p>
@@ -116,8 +124,17 @@ const Procedures = () => {
 
         {/* Procedures Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {procedures.map((procedure) => (
-            <ProcedureCard key={procedure.id} procedure={procedure} />
+          {procedures.map((procedure, index) => (
+            <div
+              key={procedure.id}
+              className={
+                index === procedures.length - 1
+                  ? "lg:col-start-2"
+                  : ""
+              }
+            >
+              <ProcedureCard procedure={procedure} />
+            </div>
           ))}
         </div>
       </div>

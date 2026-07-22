@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="relative w-full max-w-lg lg:max-w-xl">
               <div className="animate-float">
                 <img
-                  src="https://images.pexels.com/photos/3757951/pexels-photo-3757951.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/Hero.jpg"
                   alt="Premium skincare treatment at Lumière Skin Clinic"
                   className="w-full h-auto rounded-card shadow-2xl object-cover"
                   loading="eager"
